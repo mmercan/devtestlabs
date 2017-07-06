@@ -1,21 +1,21 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
-    "title": "Run PowerShell",
-    "description": "Use this to run a script using PowerShell",
-    "publisher": "Microsoft",
+    "title": "Add Host Record",
+    "description": "",
+    "publisher": "mmercan",
     "tags": [
-        "PowerShell"
+        "Windows"
     ],
-    "iconUri": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/Artifacts/windows-run-powershell/powershell.png",
+    "iconUri": "https://raw.githubusercontent.com/mmercan/devtestlabs/master/Artifacts/windows-hostedit/icon_1.png",
     "targetOsType": "Windows",
     "parameters": {
-        "scriptFileUris": {
+        "addrecord": {
             "type": "array",
-            "displayName": "File URI(s)",
-            "description": "All the files to download to the VM for script execution. To specify multiple files, format them as a JSON array (e.g. [\"file1\", \"file2\"])."
+            "displayName": "New Record Line",
+            "description": "This new record line will be added to host."
         }
     },
     "runCommand": {
-        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File hostedit.ps1"
+         "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./hostedit.ps1 -addrecord ''', parameters('addrecord'), '''\"')]"
     }
 }
