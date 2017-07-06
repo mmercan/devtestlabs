@@ -16,6 +16,6 @@
         }
     },
     "runCommand": {
-         "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./hostedit.ps1 -addrecord ''', parameters('addrecord'), '''\"')]"
+         "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./hostedit.ps1 -addrecord ', parameters('addrecord'), '\"')]"
     }
 }
