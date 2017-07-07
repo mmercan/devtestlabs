@@ -16,6 +16,6 @@
         }
     },
     "runCommand": {
-         "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./enablewinrm.ps1 -hostname ', parameters('hostname'), '\"')]"
+         "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./startenablewinrm.ps1 -hostname ', parameters('hostname'), '\"')]"
     }
 }
