@@ -6,7 +6,7 @@
     "tags": [
         "Windows"
     ],
-    "iconUri": "https://raw.githubusercontent.com/mmercan/devtestlabs/master/Artifacts/windows-hostedit/icon_1.png",
+    "iconUri": "https://raw.githubusercontent.com/mmercan/devtestlabs/master/Artifacts/windows-enable-winrm/icon_1.png",
     "targetOsType": "Windows",
     "parameters": {
         "hostname": {
