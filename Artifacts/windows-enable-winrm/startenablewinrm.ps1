@@ -8,4 +8,6 @@ $ipV4 = Test-Connection -ComputerName (hostname) -Count 1  | Select IPV4Address
 $ip = $ipV4.IPV4Address.IPAddressToString
 Write-Host $ip
 
+./enablewinrm.ps1  -hostname $ip -protocol http
+
 ./enablewinrm.ps1  -hostname $ip -protocol https
