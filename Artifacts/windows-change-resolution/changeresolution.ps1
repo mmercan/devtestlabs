@@ -13,5 +13,3 @@ $webclient.DownloadFile($zipfile,$filepath)
 echo "Saved $filename"
 
 Unzip -zipfile $filepath -outpath "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
-
-robocopy ".\ChangeScreenResolution" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
