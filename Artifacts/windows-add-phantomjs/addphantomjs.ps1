@@ -15,6 +15,8 @@ echo "Saved $filename"
 Unzip -zipfile $filepath -outpath "C:\drivers"
 
 
-$oldPath=(Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINESystemCurrentControlSetControlSession ManagerEnvironment' -Name PATH).Path
-$newPath=$oldPath+';C:\drivers'
-Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINESystemCurrentControlSetControlSession ManagerEnvironment' -Name PATH -Value $newPath
+$AddedLocation ="c:\drivers"
+$Reg = "Registry::HKLM\System\CurrentControlSet\Control\Session Manager\Environment"
+$OldPath = (Get-ItemProperty -Path "$Reg" -Name PATH).Path
+$NewPath= $OldPath + ’;’ + $AddedLocation
+Set-ItemProperty -Path "$Reg" -Name PATH –Value $NewPath
