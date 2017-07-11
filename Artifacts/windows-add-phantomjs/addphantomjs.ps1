@@ -18,5 +18,5 @@ Unzip -zipfile $filepath -outpath "C:\drivers"
 $AddedLocation ="c:\drivers"
 $Reg = "Registry::HKLM\System\CurrentControlSet\Control\Session Manager\Environment"
 $OldPath = (Get-ItemProperty -Path "$Reg" -Name PATH).Path
-$NewPath= $OldPath + ’;’ + $AddedLocation
-Set-ItemProperty -Path "$Reg" -Name PATH –Value $NewPath
+$NewPath= $OldPath + ';' + $AddedLocation
+Set-ItemProperty -Path "$Reg" -Name PATH -Value $NewPath
